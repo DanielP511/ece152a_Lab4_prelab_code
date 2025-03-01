@@ -2,7 +2,7 @@ module divisible_by_3 (
 input logic clk,
 input logic rst_n,
 input logic serial_i,
-output logic divisible_by_5_o
+output logic divisible_by_3_o
 );
   
   typedef enum logic [3:0] {
@@ -14,7 +14,7 @@ output logic divisible_by_5_o
 } state_t;
 state_t state_d, state_q = REMAINDER_0;
 
-assign divisible_by_5_o = (state_q == REMAINDER_0);
+assign divisible_by_3_o = (state_q == REMAINDER_0);
   
 always_comb begin
   state_d = REMAINDER_0;
